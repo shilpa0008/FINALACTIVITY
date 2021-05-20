@@ -21,7 +21,7 @@ app.use(cors({
 }));
 //ends enable cors
 // Set up mongoose connection
-/* const mongoose = require('mongoose');
+ const mongoose = require('mongoose');
 let dev_db_url = 'mongodb+srv://userDetail:test123@cluster0-3meur.mongodb.net/userDetail?retryWrites=true&w=majority';
 const mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.set('useCreateIndex', true)
@@ -31,7 +31,7 @@ const db = mongoose.connection;
 db.on('uncaughtException', function (err) {
   console.error(err);
   console.log("Node NOT Exiting...");
-});*/
+});
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/user', userDetail);
